@@ -1,0 +1,15 @@
+Root is = Node: 1
+Root Label is = 1
+Left Child is = Node: 2
+Right Child is = Node: 3
+Left Child weight is = 5
+Right Child weight is = 3
+<--- Go Left Marty
+New root is: 2
+<--- Go Left Marty
+New root is: 4
+<--- Go Left Marty
+New root is: 8
+<--- Go Left Marty
+New root is: 17
+Largest Funness: 20
