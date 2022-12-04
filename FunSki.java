@@ -65,6 +65,8 @@ public class FunSki {
                 //System.out.println("Right child of newRoot is: "+Rchild);
                 Lw = root.getLeftWeight();
                 Rw = root.getRightWeight();
+                arr[size] = "Node: "+root.getLabel();
+                ++size;
             } else if (compareTo(Lw, Rw) == 0){
                 //System.out.println("Marty goes home because he can't decide which way to go.");
             }
