@@ -1,7 +1,7 @@
 // Basic BinaryNode class, Feel free to edit this case.
 
 public class BinaryNode {
-    private String[] name = null;
+    //private String[] name = null;
     private String label; // The label of the node
     private BinaryNode[] childs; // childs[0] points to the left child, and childs[1] points to the right child
     private int[] weights; // weights[0] is the funness of the left ski path from here, and weights[1]
@@ -19,17 +19,17 @@ public class BinaryNode {
         this.label = label;
         this.childs = new BinaryNode[]{left, right};
         this.weights = new int[]{lw, rw};
-        int size = 20;
-        this.name = new String[size];
+        //int size = 20;
+        //this.name = new String[size];
     }
 
-    public String[] getBackPtr(int i) { 
-        return name;
-    }
+    //public String[] getBackPtr(int i) { 
+    //    return name;
+    //}
 
-    public void setbackPtr(String[] name2){ 
-        this.name = name2;
-    }
+    //public void setbackPtr(String[] name2){ 
+    //    this.name = name2;
+    //}
 	// Accessors and Mutators 
 
     public BinaryNode getLeftChild() {
