@@ -33,7 +33,7 @@ public class FunSki {
 
         int Lw = root.getLeftWeight();
         int Rw = root.getRightWeight();
-        String[] arr = new String[20]; 
+        String[] arr = new String[100000000]; 
         BinaryNode old_root = root;
         while (root.getLeftWeight() > 0 || root.getRightWeight() > 0){
             if (compareTo(Lw, Rw) > 0){               
