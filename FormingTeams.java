@@ -13,20 +13,19 @@ public class FormingTeams {
 		//Check if a member of Team 1 already
 		if (T[student_x][1] == 1) {
 			//place neighbors into Team 2 if not already on Team 2
-			if (T[neighbor][2] != 1) {
+			if ((T[neighbor][2] != 1) && (T[neighbor][1] == 0)) {
 				T[neighbor][2] = 1;
 			}
 		} else if (T[student_x][2] == 1) {
 			//place neighbors into Team 1 if not already on Team 1
-			if (T[neighbor][1] != 1) {
-				T[neighbor][1] = 1;
+			if ((T[neighbor][1] != 1) && (T[neighbor][2] == 0)) {
+				T[neighbor][1] = 1;	
 			}
 			//Lastly, if not assigned, place on Team 1
-		} else if (T[student_x][0] == 1) {
+		} else if ((T[student_x][1] == 0) && (T[neighbor][2] == 0)) {
 			T[neighbor][1] = 1;
 		}
 	}
-
 	public static void main(String [] args) {
 		Scanner kb = new Scanner(System.in);
 		n = kb.nextInt();
@@ -72,11 +71,10 @@ public class FormingTeams {
 		 	for (Integer y: adjacency_list[x]) {// this loops through the neighbor x
 				//converts the Integer object to int 
 				//(z is a neighbor of x)
+				//call placeNTeam to run the checks and adding to Teams
 				int z = y.intValue();
 				placeNTeam(x, z);
-				//call placeNTeam to run the checks and adding to Teams
 				//System.out.println("Neighbors of "+x+" are: "+z);
-				
 			}
 		}
 		int [] arr = new int[x + 1];
@@ -88,6 +86,9 @@ public class FormingTeams {
 				arr[i] = 1;
 			} else if (T[i][2] == 1) {
 				arr[i] = 2;
+			} else {
+				System.out.println("impossible");
+				return;
 			}
 			//System.out.println();
 		}
